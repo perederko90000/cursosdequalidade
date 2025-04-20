@@ -11,28 +11,64 @@
         <p>Escolha entre os melhores cursos para turbinar sua carreira e crescer no digital!</p>
     </header>
 
+    <div class="filter-container">
+        <label for="priceFilter">Filtrar por preço:</label>
+        <select id="priceFilter">
+            <option value="all">Todos</option>
+            <option value="below50">Até R$ 50</option>
+            <option value="50to100">De R$ 50 a R$ 100</option>
+            <option value="above100">Acima de R$ 100</option>
+            <option value="lowToHigh"> Menor para maior</option>
+        </select>
+    </div>
+
     <main class="product-grid">
         <div class="product-card">
             <img src="./imagens/google-ads_resized_enhanced.png" alt="Curso Google Ads" />
             <h2>🚀 Google Ads Para Empresas</h2>
             <p>Aprenda a criar campanhas que realmente vendem. Ideal para negócios e freelancers.</p>
             <h2>R$ 108,77</h2>
-            <a href="https://go.hotmart.com/M99287000K?dp=1" class="cta-button"  target="_blank" >Acesse Agora</a>
+            <a href="https://go.hotmart.com/M99287000K?dp=1" class="cta-button" target="_blank">Acesse Agora</a>
         </div>
         <div class="product-card">
             <img src="./imagens/excel-image.png" alt="Curso de Excel" />
             <h2>📈 Curso de Excel Completo</h2>
             <p>Do básico ao avançado, crie planilhas profissionais e domine fórmulas e gráficos!</p>
             <h2>R$ 29,90</h2>
-            <a href="https://go.hotmart.com/T99291115A?dp=1" class="cta-button"  target="_blank" >Quero Aprender!</a>
+            <a href="https://go.hotmart.com/T99291115A?dp=1" class="cta-button" target="_blank">Quero Aprender!</a>
         </div>
         <div class="product-card">
             <img src="./imagens/imagem-instagram.png" alt="Curso de Vendas no Instagram" />
             <h2>📱 Vendas no Instagram</h2>
             <p>Transforme seguidores em clientes com estratégias práticas e diretas!</p>
             <h2>R$ 39,90</h2>
-            <a href="https://go.hotmart.com/H99291057Y?dp=1" class="cta-button"  target="_blank" >Comece Agora</a>
+            <a href="https://go.hotmart.com/H99291057Y?dp=1" class="cta-button" target="_blank">Comece Agora</a>
         </div>
+        <div class="product-card">
+            <img src="./imagens/Imagem-desenho.jpg" alt="Em Produção" />
+            <h2>🎨 Curso Desenhe Agora do Zero </h2>
+            <p>Entre no mundo do desenho mesmo sem talento ou experiência! Aprenda a criar personagens, cenários e a
+                fazer coloração completa.</p>
+            <h2>R$ 160,00</h2>
+            <a href="https://go.hotmart.com/I99296302M?dp=1" class="cta-button" target="_blank">Acesse agora</a>
+        </div>
+
+        <div class="product-card">
+            <img src="./imagens/CapaCanvas2.png" alt="Em Produção" />
+            <h2> 🎨 Curso Design no Canva – Do Básico ao Avançado</h2>
+            <p>Aprenda a usar o Canva para criar posts, promoções e conteúdos que se destacam nas redes sociais.</p>
+            <h2>R$ 147,00</h2>
+            <a href="https://go.hotmart.com/V99295285E?dp=1" class="cta-button" target="_blank">Quero Aprender!</a>
+        </div>
+
+        <div class="product-card">
+            <img src="./imagens/ExcelePower.jpg" alt="Em Produção" />
+            <h2>📈 Curso de Excel + Power BI</h2>
+            <p>Domine as ferramentas que o mercado mais valoriza!</p>
+            <h2>R$ 147,00</h2>
+            <a href="https://go.hotmart.com/A99296212M?dp=1" class="cta-button" target="_blank">Comece Agora</a>
+        </div>
+
         <div class="product-card oculto">
             <img src="./imagens/em produção.png" alt="Em Produção" />
             <h2>⏳ Curso em Analise</h2>
@@ -73,34 +109,39 @@
             </p>
         </section>
 
-        <section class="newsletter">
+        <!-- <section class="newsletter">
             <h2>🚀 Cadastre-se e Fature com Dicas Exclusivas</h2>
             <p>Receba os melhores links de afiliado direto no seu e-mail.</p>
-            <div class="newsletter-form">
-                <input type="email" placeholder="Seu e-mail" />
-                <button>Inscrever</button>
-            </div>
-        </section>
-    </footer>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17018223410">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+            <form action="/cadastro" method="POST">
+                <input type="email" name="email" placeholder="Seu e-mail" required />
+                <button type="submit">Inscrever</button>
+            </form>
 
-  gtag('config', 'AW-17018223410');
-</script>
+
+        </section>
+    -->
+    </footer>
+    <script src="/script.js"></script>
+    <script src="server.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17018223410">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-17018223410');
+    </script>
     <!-- Event snippet for Compra conversion page -->
-<script>
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17018223410/vfFwCI21tboaELL29bI_',
-      'value': 1.0,
-      'currency': 'BRL',
-      'transaction_id': ''
-  });
-</script>
+    <script>
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17018223410/vfFwCI21tboaELL29bI_',
+            'value': 1.0,
+            'currency': 'BRL',
+            'transaction_id': ''
+        });
+    </script>
 
 </body>
 
