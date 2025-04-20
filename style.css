@@ -160,7 +160,7 @@ body.affiliate-body {
     opacity: 0.8;
     pointer-events: none;
 }
-beneficios-garantia {
+.beneficios-garantia {
     background-color: #f0f4ff;
     padding: 4rem 2rem;
     text-align: center;
