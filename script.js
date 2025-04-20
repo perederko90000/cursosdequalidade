@@ -1,44 +1,46 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { MotionDiv } from "@/components/motion-div";
+document.addEventListener("DOMContentLoaded", function () {
+  const priceFilter = document.getElementById("priceFilter");
 
-export default function SalesLandingPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-100 p-8">
-      <header className="text-center mb-16">
-        <h1 className="text-4xl font-bold mb-4">Descubra Ofertas Incríveis</h1>
-        <p className="text-lg text-gray-600">Produtos exclusivos com preços imperdíveis. Aproveite agora!</p>
-      </header>
+  priceFilter.addEventListener("change", function () {
+    const selected = this.value;
+    const grid = document.querySelector(".product-grid");
+    const cards = Array.from(document.querySelectorAll(".product-card"));
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {[1, 2, 3].map((item) => (
-          <MotionDiv key={item} className="hover:scale-105 transition-transform">
-            <Card className="rounded-2xl shadow-md">
-              <CardContent className="p-4">
-                <img
-                  src={`https://source.unsplash.com/random/300x200?sig=${item}`}
-                  alt="Produto"
-                  className="rounded-xl mb-4"
-                />
-                <h2 className="text-xl font-semibold">Produto {item}</h2>
-                <p className="text-gray-600">Descrição breve do produto que destaca seus principais benefícios.</p>
-                <Button className="mt-4 w-full">Comprar Agora</Button>
-              </CardContent>
-            </Card>
-          </MotionDiv>
-        ))}
-      </div>
+    if (selected === "lowToHigh") {
+      const filteredCards = cards
+        .filter(card => {
+          const priceTag = card.querySelector("h2:nth-of-type(2)");
+          if (!priceTag) return false;
+          const priceText = priceTag.innerText.trim();
+          if (priceText.includes("*/Em breve*/")) return false;
+          return true;
+        })
+        .sort((a, b) => {
+          const priceA = parseFloat(a.querySelector("h2:nth-of-type(2)").innerText.replace("R$ ", "").replace(",", "."));
+          const priceB = parseFloat(b.querySelector("h2:nth-of-type(2)").innerText.replace("R$ ", "").replace(",", "."));
+          return priceA - priceB;
+        });
 
-      <section className="mt-16 text-center">
-        <h2 className="text-2xl font-bold mb-2">Receba novidades e promoções</h2>
-        <p className="text-gray-600 mb-4">Assine nossa newsletter para não perder nenhuma oferta!</p>
-        <div className="flex justify-center gap-2 max-w-md mx-auto">
-          <Input placeholder="Digite seu e-mail" className="rounded-xl" />
-          <Button className="rounded-xl">Inscrever</Button>
-        </div>
-      </section>
-    </div>
-  );
-}
+      grid.innerHTML = "";
+      filteredCards.forEach(card => grid.appendChild(card));
+    } else {
+      cards.forEach((card) => {
+        const priceTag = card.querySelector("h2:nth-of-type(2)");
+        if (!priceTag) return;
+
+        const priceText = priceTag.innerText.trim();
+        if (priceText.includes("Em breve")) return;
+
+        const price = parseFloat(priceText.replace("R$ ", "").replace(",", "."));
+
+        let show = true;
+        if (selected === "below50" && price > 50) show = false;
+        if (selected === "50to100" && (price < 50 || price > 100)) show = false;
+        if (selected === "above100" && price <= 100) show = false;
+
+        card.style.display = show ? "block" : "none";
+      });
+    }
+  });
+});
+
