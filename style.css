@@ -42,12 +42,34 @@ body.affiliate-body {
     }
 }
 
+.filter-container {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
 
+}
+
+
+#priceFilter {
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    border: 1px solid #d1d5db;
+    font-weight: bold;
+    background: white;
+    color: #374151;
+    font-size: 1rem;
+    font-family: 'Segoe UI', sans-serif;
+    cursor: pointer;
+}
+
+
+/*      main                      */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
 }
+
 
 .product-card {
     background: #ffffff;
@@ -147,6 +169,7 @@ body.affiliate-body {
     background: #e0e7ff;
     text-align: center;
     margin-top: 10rem;
+    margin-bottom: 2%;
     padding: 2.5rem 1.5rem;
     border-radius: 1rem;
     animation: fadeInUp 1.2s ease;
