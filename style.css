@@ -160,6 +160,114 @@ body.affiliate-body {
     opacity: 0.8;
     pointer-events: none;
 }
+beneficios-garantia {
+    background-color: #f0f4ff;
+    padding: 4rem 2rem;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    transition: transform 0.3s ease;
+}
+
+
+.beneficios-garantia .titulo {
+    font-size: 2rem;
+    color: #1e40af;
+    margin-bottom: 2rem;
+}
+
+.beneficios-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.beneficio {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.beneficio:hover {
+    transform: translateY(-5px);
+}
+
+.beneficio h3 {
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.beneficio p {
+    color: #374151;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+.garantia {
+    background: #dbeafe;
+    padding: 2rem;
+    border-radius: 1rem;
+    animation: fadeInUp 1.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: float 3s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+.titulo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: pulse 2s infinite;
+}
+
+.garantia p {
+    color: #1e3a8a;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Movimento constante tipo “flutuar” */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Animação de pulsar no título */
+@keyframes pulse {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: scale(1.03);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
 
 
