@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -13,16 +13,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <!-- Google tag (gtag.js) --> <!-- Google tag (gtag.js) -->
+
+    <link rel="stylesheet" href="style.css">
+
+<!-- Global site tag (gtag.js) - Google Ads -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17020050396"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'AW-17020050396');
 </script>
-    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body class="bg-gray-50 text-gray-800">
@@ -298,7 +300,21 @@
         AOS.init();
     </script>
     <script src="/script.js"></script>
-    <!-- Event snippet for Visualização de página conversion page --> <script> gtag('event', 'conversion', {'send_to': 'AW-17020050396/tYq9CI3U6roaENy35bM_'}); </script>
+
+<script>
+  document.querySelectorAll('a[target="_blank"]').forEach(botao => {
+    botao.addEventListener('click', function () {
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17020050396/H76LCLLpu7saENy35bM_',
+          'value': 1.0,
+          'currency': 'BRL'
+        });
+      }
+    });
+  });
+</script>
+
 </body>
 
 </html>
