@@ -1,208 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>🔥 Cursos Online em Promoção - Aprenda e Lucre!</title>
-    <link rel="stylesheet" href="./style.css" />
+    <meta name="description"
+        content="Cursos online práticos e acessíveis para redes sociais, Excel, edição de vídeo e mais. Comece hoje e transforme seu futuro profissional.">
+    <title>Cursos de Qualidade</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="affiliate-body">
-    <header class="affiliate-header">
-        <h1>🎓 Cursos Online que Transformam!</h1>
-        <p>Escolha entre os melhores cursos para turbinar sua carreira e crescer no digital!</p>
+<body class="bg-gray-50 text-gray-800">
+    <header class="bg-gradient-to-r from-indigo-700 to-pink-600 text-white py-20 shadow-xl">
+        <div class="max-w-7xl mx-auto px-6 text-center" data-aos="zoom-in">
+            <h1 class="text-5xl font-extrabold leading-tight animate-pulse">🎯 Aprenda agora e aumente sua renda ainda
+                este mês!</h1>
+            <p class="text-xl mt-6 font-medium">Cursos práticos, rápidos e acessíveis para transformar sua vida
+                profissional</p>
+            <a href="#cursos"
+                class="mt-8 inline-block bg-white text-indigo-700 font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-gray-100 transition pulse">Ver
+                todos os cursos</a>
+        </div>
     </header>
 
-    <div class="filter-container">
-        <label for="priceFilter">Filtrar por preço:</label>
-        <select id="priceFilter">
-            <option value="all">Todos</option>
-            <option value="below50">Até R$ 50</option>
-            <option value="50to100">De R$ 50 a R$ 100</option>
-            <option value="above100">Acima de R$ 100</option>
-            <option value="lowToHigh"> Menor para maior</option>
-        </select>
-    </div>
-
-  <main class="product-grid">
-
-        <div class="product-card">
-            <img src="./imagens/imagem-pinterest.png" alt="Curso Pinterest" />
-            <h2>📌 Curso de Pinterest Profissional</h2>
-            <p>Aprenda a criar pins que geram tráfego e vendas todos os dias!</p>
-            <h2>R$ 17,00</h2>
-            <a href="https://go.hotmart.com/M99310054D?dp=1" class="cta-button" target="_blank">Comece Agora</a>
-        </div>
-       <div class="product-card">
-            <img src="./imagens/imagem-instagram.png" alt="Curso de Vendas no Instagram" />
-            <h2>📱 Vendas no Instagram</h2>
-            <p>Transforme seguidores em clientes com estratégias práticas e diretas!</p>
-            <h2>R$ 29,90</h2>
-            <a href="https://go.hotmart.com/H99291057Y?dp=1" class="cta-button" target="_blank">Comece Agora</a>
+    <section id="cursos" class="max-w-7xl mx-auto py-24 px-6">
+        <h2 class="text-4xl font-extrabold mb-16 text-center text-indigo-700" data-aos="fade-up">🔥 Cursos em Destaque
+        </h2>
+        <div class="mb-12 text-center">
+            <label for="filtro-preco" class="block text-lg font-semibold text-indigo-700 mb-2">Filtrar por
+                preço:</label>
+            <select id="filtro-preco" class="px-4 py-2 rounded-lg border border-indigo-300">
+                <option value="todos">Todos</option>
+                <option value="ate50">Até R$50</option>
+                <option value="50a100">R$50 a R$100</option>
+                <option value="acima100">Acima de R$100</option>
+            </select>
         </div>
 
-      
-        <div class="product-card ">
-            <img src="./imagens/ChatGPT Image 20 de abr. de 2025, 14_45_38.png" alt="Em Produção" />
-            <h2>⏳ Chatbot para WhatsApp </h2>
-            <p>Atenda clientes 24h por dia, aumente suas vendas e automatize tudo com eficiência. 💬</p>
-            <h2>R$ 37,90 </h2>
-            <a href="https://pay.kiwify.com.br/AOVpBhh?afid=x7WF5JlL" class="cta-button" target="_blank">Acesse
-                agora</a>
-        </div>
-        <div class="product-card">
-            <img src="./imagens/excel-image.png" alt="Curso de Excel" />
-            <h2>📈 Curso de Excel Completo</h2>
-            <p>Do básico ao avançado, crie planilhas profissionais e domine fórmulas e gráficos!</p>
-            <h2>R$ 39,90</h2>
-            <a href="https://go.hotmart.com/T99291115A?dp=1" class="cta-button" target="_blank">Quero Aprender!</a>
-        </div>
-       
-        <div class="product-card">
-            <img src="./imagens/google-ads_resized_enhanced.png" alt="Curso Google Ads" />
-            <h2>🚀 Google Ads Para Empresas</h2>
-            <p>Aprenda a criar campanhas que realmente vendem. Ideal para negócios e freelancers.</p>
-            <h2>R$ 108,77</h2>
-            <a href="https://go.hotmart.com/M99287000K?dp=1" class="cta-button" target="_blank">Acesse Agora</a>
-        </div>
-        <div class="product-card">
-            <img src="./imagens/imagem-power-bi.jpg" alt="Em Produção" />
-            <h2>📊 Power BI sem Neura</h2>
-            <p>Aprenda na prática, crie dashboards incríveis e se destaque,tudo sem complicação! 🚀</p>
-            <h2>R$ 127,90</h2>
-            <a href="https://pay.kiwify.com.br/lDiB8nR?afid=QOcJWVCw" class="cta-button" target="_blank">Acesse
-                agora</a>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Curso de Edição de Vídeo -->
+            <div class="bg-white rounded-3xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition p-8 border border-gray-200"
+                data-aos="fade-left" data-preco="17.00">
+                <img src="./imagens/imagem-pinterest.png" alt="Curso de Edição de Vídeo"
+                    class="w-full h-48 object-cover rounded-lg mb-6">
+                <h3 class="text-2xl font-bold text-indigo-800">Pinterest Estratégico para Negócios</h3>
+                <ul class="text-gray-600 mt-3 space-y-2 text-sm">
+                    <li>📱 Use o celular para criar conteúdos atrativos</li>
+                    <li>🎬 Produza posts para TikTok, YouTube, Reels e mais</li>
+                    <li>📈 Alcance mais público com estratégias visuais</li>
+                </ul>
+
+                <p class="text-indigo-700 font-bold text-xl mt-6">R$ 17,00</p>
+
+                <p class="text-sm text-red-600 font-medium">Oferta exclusiva - só hoje!</p>
+                <p class="text-red-500 text-sm mt-1">🌟 Apenas <span id="contador-vagas">12</span> vagas restantes hoje
+                </p>
+                <a href="https://go.hotmart.com/M99310054D?dp=1"
+                    class="mt-6 inline-block bg-indigo-600 text-white px-6 py-3 rounded-xl hover:bg-indigo-700 transition"
+                    target="_blank">Quero
+                    acessar</a>
+            </div>
+            <div class="bg-white rounded-3xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition p-8 border border-gray-200"
+                data-aos="fade-left" data-preco="29.90">
+                <img src="./imagens/imagem-instagram.png" alt="Curso de Edição de Vídeo"
+                    class="w-full h-48 object-cover rounded-lg mb-6">
+                <h3 class="text-2xl font-bold text-indigo-800"> 📱 Venda Todos os Dias no Instagram</h3>
+                <ul class="text-gray-600 mt-3 space-y-2 text-sm">
+                    <li>🛍️ Estratégias simples que geram resultados reais</li>
+                    <li>📱 Tudo pelo celular: fácil e acessível</li>
+                    <li>🚀 Aprenda a atrair, engajar e converter seguidores</li>
+                </ul>
+                <p class="text-indigo-700 font-bold text-xl mt-6">R$ 29,90</p>
+                <p class="text-sm text-red-600 font-medium">Oferta exclusiva - só hoje!</p>
+                <p class="text-red-500 text-sm mt-1">🌟 Apenas <span id="contador-vagas">4</span> vagas restantes hoje
+                </p>
+                <a href="https://go.hotmart.com/H99291057Y?dp=1"
+                    class="mt-6 inline-block bg-green-500 text-white px-6 py-3 rounded-xl hover:bg-green-600 transition"
+                    target="_blank">Começe Agora</a>
+            </div>
+            <div class="bg-white rounded-3xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition p-8 border border-gray-200"
+                data-aos="fade-left" data-preco="37.90">
+                <img src="./imagens/ChatGPT Image 20 de abr. de 2025, 14_45_38.png" alt="Curso de Edição de Vídeo"
+                    class="w-full h-48 object-cover rounded-lg mb-6">
+                <h3 class="text-2xl font-bold text-indigo-800">Automatize Vendas com Chatbots no WhatsApp</h3>
+                <ul class="text-gray-600 mt-3 space-y-2 text-sm">
+                    <li>📱 Crie bots direto do celular sem programação</li>
+                    <li>📈 Melhore o atendimento e aumente conversões</li>
+                    <li>🤝 Ideal para empreendedores e pequenos negócios</li>
+                </ul>
+                <p class="text-indigo-700 font-bold text-xl mt-6">R$ 37,90</p>
+                <p class="text-sm text-blue-600 font-medium">Acesso vitalício</p>
+                <a href="https://pay.kiwify.com.br/AOVpBhh?afid=x7WF5JlL"
+                    class="mt-6 inline-block bg-indigo-600 text-white px-6 py-3 rounded-xl hover:bg-indigo-700 transition"
+                    target="_blank">Quero
+                    acessar</a>
+            </div>
+
+            <!-- Curso de Excel -->
+            <div class="bg-white rounded-3xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition p-8 border border-gray-200"
+                data-aos="zoom-in" data-preco="39.90">
+                <img src="./imagens/excel-image.png" alt="Curso de Excel"
+                    class="w-full h-48 object-cover rounded-lg mb-6">
+                <h3 class="text-2xl font-bold text-indigo-800">Domine o Excel de Forma Descomplicada</h3>
+                <ul class="text-gray-600 mt-3 space-y-2 text-sm">
+                    <li>📊 Crie planilhas inteligentes</li>
+                    <li>🚀 Aumente sua produtividade</li>
+                    <li>🧠 Aprenda com exercícios práticos</li>
+                </ul>
+                <p class="text-indigo-700 font-bold text-xl mt-6">R$ 39,90</p>
+                <p class="text-sm text-red-600 font-medium">Oferta exclusiva - só hoje!</p>
+                <p class="text-red-500 text-sm mt-1">🌟 Apenas <span id="contador-vagas">2</span> vagas restantes hoje
+                </p>
+
+                <a href="https://go.hotmart.com/T99291115A?dp=1"
+                    class="mt-6 inline-block bg-green-500 text-white px-6 py-3 rounded-xl hover:bg-green-600 transition"
+                    target="_blank">Comece
+                    agora</a>
+            </div>
+            <div class="bg-white rounded-3xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition p-8 border border-gray-200"
+                data-aos="fade-left" data-preco="108.77">
+                <img src="./imagens/google-ads_resized_enhanced.png" alt="Curso de Edição de Vídeo"
+                    class="w-full h-48 object-cover rounded-lg mb-6">
+                <h3 class="text-2xl font-bold text-indigo-800"> 🚀Anuncie com Google Ads e Aumente suas Vendas</h3>
+                <ul class="text-gray-600 mt-3 space-y-2 text-sm">
+                    <li>🎯 Alcance clientes certos com anúncios eficazes</li>
+                    <li>💰 Aprenda a investir com retorno garantido</li>
+                    <li>📈 Estratégias testadas para negócios de todos os tamanhos</li>
+                </ul>
+                <p class="text-indigo-700 font-bold text-xl mt-6">R$ 108,77</p>
+                <p class="text-sm text-blue-600 font-medium">Acesso vitalício</p>
+                <a href="https://go.hotmart.com/M99287000K?dp=1"
+                    class="mt-6 inline-block bg-indigo-600 text-white px-6 py-3 rounded-xl hover:bg-indigo-700 transition"
+                    target="_blank">Quero
+                    acessar</a>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition p-8 border border-gray-200"
+                data-aos="fade-left" data-preco="127.90">
+                <img src="./imagens/imagem-power-bi.jpg" alt="Curso de Edição de Vídeo"
+                    class="w-full h-48 object-cover rounded-lg mb-6">
+                <h3 class="text-2xl font-bold text-indigo-800">📊 Visualize Dados com Power BI de Forma Fácil</h3>
+                <ul class="text-gray-600 mt-3 space-y-2 text-sm">
+                    <li>📊 Crie dashboards profissionais do zero</li>
+                    <li>💼 Aprenda de forma prática e direta</li>
+                    <li>🚀 Curso ideal para quem quer se destacar no mercado</li>
+                </ul>
+                <p class="text-indigo-700 font-bold text-xl mt-6">R$ 127,90</p>
+                <p class="text-sm text-blue-600 font-medium">Acesso vitalício</p>
+                <a href="https://pay.kiwify.com.br/lDiB8nR?afid=QOcJWVCw"
+                    class="mt-6 inline-block bg-indigo-600 text-white px-6 py-3 rounded-xl hover:bg-indigo-700 transition"
+                    target="_blank">Quero
+                    acessar</a>
+            </div>
+
+            <!-- Curso de Canva -->
+            <div class="bg-white rounded-3xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition p-8 border border-gray-200"
+                data-aos="fade-right" data-preco="147.00">
+                <img src="./imagens/CapaCanvas2.png" alt="Curso de Canva"
+                    class="w-full h-48 object-cover rounded-lg mb-6">
+                <h3 class="text-2xl font-bold text-indigo-800">Crie Artes Profissionais com Canva</h3>
+                <ul class="text-gray-600 mt-3 space-y-2 text-sm">
+                    <li>✅ Domine o Canva mesmo sem experiência.</li>
+                    <li>🎨 Crie posts incríveis, banners e materiais promocionais.</li>
+                    <li>📱 Perfeito para redes sociais e negócios online.</li>
+                </ul>
+                <p class="text-indigo-700 font-bold text-xl mt-6">R$ 147,00</p>
+                <p class="text-sm text-red-600 font-medium">Oferta exclusiva - só hoje!</p>
+                <p class="text-red-500 text-sm mt-1">🌟 Apenas <span id="contador-vagas">12</span> vagas restantes hoje
+                </p>
+                <a href="https://go.hotmart.com/V99295285E?dp=1"
+                    class="mt-6 inline-block bg-pink-600 text-white px-6 py-3 rounded-xl hover:bg-pink-700 transition"
+                    target="_blank">Matricule-se
+                    agora </a>
+                <p class="text-sm text-gray-500 mt-2 flex items-center justify-center">
+                    ✅ Compra segura com garantia de 7 dias
+                </p>
+            </div>
+
+
+
+            <div class="bg-white rounded-3xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition p-8 border border-gray-200"
+                data-aos="fade-left" data-preco="147.00">
+                <img src="./imagens/ExcelePower.jpg" alt="Curso de Edição de Vídeo"
+                    class="w-full h-48 object-cover rounded-lg mb-6">
+                <h3 class="text-2xl font-bold text-indigo-800"> 📈 Pacote Completo: Excel & Power BI</h3>
+                <ul class="text-gray-600 mt-3 space-y-2 text-sm">
+                    <li>🔥 Domine análise de dados do básico ao avançado</li>
+                    <li>📈 Crie relatórios e dashboards profissionais</li>
+                    <li>💼 Ideal para impulsionar sua carreira ou negócios</li>
+                </ul>
+                <p class="text-indigo-700 font-bold text-xl mt-6">R$ 147,00</p>
+                <p class="text-sm text-blue-600 font-medium">Acesso vitalício</p>
+                <a href="https://go.hotmart.com/A99296212M?dp=1"
+                    class="mt-6 inline-block bg-indigo-600 text-white px-6 py-3 rounded-xl hover:bg-indigo-700 transition"
+                    target="_blank">Quero
+                    acessar </a>
+            </div>
+            <div class="bg-white rounded-3xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition p-8 border border-gray-200"
+                data-aos="fade-left" data-preco="147.00">
+                <img src="./imagens/Imagem-desenho.jpg" alt="Curso de Edição de Vídeo"
+                    class="w-full h-48 object-cover rounded-lg mb-6">
+                <h3 class="text-2xl font-bold text-indigo-800"> 🎨 Curso Desenhe Agora do Zero</h3>
+                <ul class="text-gray-600 mt-3 space-y-2 text-sm">
+                    <li>🧩 Do básico ao avançado: domine todos os tipos de desenhos</li>
+                    <li>💼 Crie artes incríveis para vendas, portfólio e redes</li>
+                    <li>📱 Curso adaptado para celular e computador</li>
+                </ul>
+                <p class="text-indigo-700 font-bold text-xl mt-6">R$ 160,00</p>
+                <p class="text-sm text-blue-600 font-medium">Acesso vitalício</p>
+                <a href="https://go.hotmart.com/I99296302M?dp=1"
+                    class="mt-6 inline-block bg-indigo-600 text-white px-6 py-3 rounded-xl hover:bg-indigo-700 transition"
+                    target="_blank">Quero
+                    acessar</a>
+            </div>
+
+
+
         </div>
 
 
-        <div class="product-card">
-            <img src="./imagens/CapaCanvas2.png" alt="Em Produção" />
-            <h2> 🎨 Curso Design no Canva – Do Básico ao Avançado</h2>
-            <p>Aprenda a usar o Canva para criar posts, promoções e conteúdos que se destacam nas redes sociais.</p>
-            <h2>R$ 147,00</h2>
-            <a href="https://go.hotmart.com/V99295285E?dp=1" class="cta-button" target="_blank">Quero Aprender!</a>
-        </div>
 
-        <div class="product-card">
-            <img src="./imagens/ExcelePower.jpg" alt="Em Produção" />
-            <h2>📈 Curso de Excel + Power BI</h2>
-            <p>Domine as ferramentas que o mercado mais valoriza!</p>
-            <h2>R$ 147,00</h2>
-            <a href="https://go.hotmart.com/A99296212M?dp=1" class="cta-button" target="_blank">Comece Agora</a>
-        </div>
-        <div class="product-card">
-            <img src="./imagens/Imagem-desenho.jpg" alt="Em Produção" />
-            <h2>🎨 Curso Desenhe Agora do Zero </h2>
-            <p>Entre no mundo do desenho mesmo sem talento ou experiência! Aprenda a criar personagens, cenários e a
-                fazer coloração completa.</p>
-            <h2>R$ 160,00</h2>
-            <a href="https://go.hotmart.com/I99296302M?dp=1" class="cta-button" target="_blank">Acesse agora</a>
-        </div>
-        <div class="product-card oculto">
-            <img src="./imagens/em produção.png" alt="Em Produção" />
-            <h2>⏳ Curso em Analise</h2>
-            <p>Conteúdo exclusivo sendo preparado para você!</p>
-            <h2>Em breve</h2>
-            <span class="cta-button disabled">Aguarde</span>
-        </div>
 
-        <div class="product-card oculto">
-            <img src="./imagens/em produção.png" alt="Em Produção" />
-            <h2>⏳ Curso em Analise</h2>
-            <p>Conteúdo exclusivo sendo preparado para você!</p>
-            <h2>Em breve</h2>
-            <span class="cta-button disabled">Aguarde</span>
-        </div>
 
-        <div class="product-card oculto">
-            <img src="./imagens/em produção.png" alt="Em Produção" />
-            <h2>⏳ Curso em Analise</h2>
-            <p>Conteúdo exclusivo sendo preparado para você!</p>
-            <h2>Em breve</h2>
-            <span class="cta-button disabled">Aguarde</span>
-        </div>
-    </main>
-    <footer>
-          <section class="beneficios-garantia">
-            <div class="container">
-                <h2 class="titulo">✨ Por que escolher esses cursos?</h2>
 
-                <div class="beneficios-lista">
-                    <div class="beneficio">
-                        <h3>✅ Conteúdo Atualizado</h3>
-                        <p>Você aprende com materiais sempre alinhados às tendências mais recentes do mercado.</p>
-                    </div>
-                    <div class="beneficio">
-                        <h3>✅ Certificado Reconhecido</h3>
-                        <p>Ao final do curso, você recebe um certificado que valoriza seu currículo e perfil
-                            profissional.</p>
-                    </div>
-                    <div class="beneficio">
-                        <h3>✅ Suporte Especializado</h3>
-                        <p>Equipe pronta para tirar dúvidas e te ajudar durante sua jornada de aprendizado.</p>
-                    </div>
-                    <div class="beneficio">
-                        <h3>✅ Acesso Vitalício</h3>
-                        <p>Estude no seu tempo! O acesso é vitalício e você pode revisar o conteúdo sempre que quiser.
-                        </p>
-                    </div>
+    </section>
+
+    <section class="bg-white py-24" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-extrabold text-indigo-800 mb-12">✨ O que dizem nossos alunos</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-100 rounded-2xl p-8 shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
+                    data-aos="flip-left">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg"
+                        alt="Depoimento de Letícia, aluna do curso de Canva"
+                        class="w-20 h-20 rounded-full mx-auto mb-6 object-cover border-4 border-indigo-600">
+                    <blockquote class="text-gray-700 italic text-lg mb-4">"Fiz o curso de Canva e agora faço todas as
+                        artes da minha loja! Muito fácil de aprender e os resultados são surpreendentes."</blockquote>
+                    <p class="mt-4 font-semibold text-indigo-700 text-xl">— Letícia F. <span
+                            class="text-gray-500">Empreendedora</span></p>
                 </div>
-
-                <div class="garantia">
-                    <h2 class="titulo">🚀 Garantia de Satisfação!</h2>
-                    <p>Ao se inscrever, você tem <strong>7 dias de garantia</strong>. Se não estiver satisfeito,
-                        devolvemos 100% do seu dinheiro. Sem burocracia, sem letras miúdas.</p>
+                <div class="bg-gray-100 rounded-2xl p-8 shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
+                    data-aos="flip-up">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                        alt="Depoimento de Lucas, aluno do curso de Excel"
+                        class="w-20 h-20 rounded-full mx-auto mb-6 object-cover border-4 border-indigo-600">
+                    <blockquote class="text-gray-700 italic text-lg mb-4">"Nunca imaginei que aprender Excel fosse tão
+                        simples. Agora consigo gerenciar melhor meus dados e consegui um novo emprego graças ao curso."
+                    </blockquote>
+                    <p class="mt-4 font-semibold text-indigo-700 text-xl">— Lucas R. <span
+                            class="text-gray-500">Assistente Administrativo</span></p>
+                </div>
+                <div class="bg-gray-100 rounded-2xl p-8 shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
+                    data-aos="flip-right">
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg"
+                        alt="Depoimento de Jéssica, aluna de edição de vídeo"
+                        class="w-20 h-20 rounded-full mx-auto mb-6 object-cover border-4 border-indigo-600">
+                    <blockquote class="text-gray-700 italic text-lg mb-4">"Já editei vários vídeos pro TikTok e até
+                        fechei parcerias! O curso é claro, direto ao ponto, e me ajudou a crescer muito em minha
+                        carreira."</blockquote>
+                    <p class="mt-4 font-semibold text-indigo-700 text-xl">— Jéssica M. <span
+                            class="text-gray-500">Criadora de Conteúdo</span></p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
+    <section class="bg-indigo-50 border-t border-indigo-100 py-20" data-aos="fade-up">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-indigo-800 mb-8">💬 Fale com a gente pelo WhatsApp</h2>
+            <p class="text-lg text-gray-700 mb-8">Tem dúvidas? Envie uma mensagem para nossa equipe de suporte e
+                responderemos rapidamente. Estamos aqui para ajudar!</p>
+            <a href="https://wa.me/5511951069213"
+                class="bg-green-500 text-white text-xl font-semibold px-6 py-3 rounded-full inline-flex items-center justify-center hover:bg-green-600 transition">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
+                    class="w-8 h-8">
 
+            </a>
+        </div>
+    </section>
 
-
-        <section class="sobre-nos">
-            <h2>🛍️ Mais sobre a nossa plataforma</h2>
-            <p>
-                Nosso objetivo é levar conhecimento de qualidade para o maior número de pessoas possível. Trabalhamos
-                com os
-                melhores produtores do mercado digital para oferecer cursos acessíveis, atualizados e com foco em
-                resultados. Seja para quem quer conquistar um emprego melhor, empreender ou crescer nas redes sociais,
-                aqui
-                você encontra o curso ideal.
-            </p>
-        </section>
-
-        <!-- <section class="newsletter">
-            <h2>🚀 Cadastre-se e Fature com Dicas Exclusivas</h2>
-            <p>Receba os melhores links de afiliado direto no seu e-mail.</p>
-            <form action="/cadastro" method="POST">
-                <input type="email" name="email" placeholder="Seu e-mail" required />
-                <button type="submit">Inscrever</button>
-            </form>
-
-
-        </section>
-    -->
-    </footer>
+    <script>
+        AOS.init();
+    </script>
     <script src="/script.js"></script>
-    <script src="server.js"></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17018223410">
-    </script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'AW-17018223410');
-    </script>
-    <!-- Event snippet for Compra conversion page -->
-    <script>
-        gtag('event', 'conversion', {
-            'send_to': 'AW-17018223410/vfFwCI21tboaELL29bI_',
-            'value': 1.0,
-            'currency': 'BRL',
-            'transaction_id': ''
-        });
-    </script>
-
 </body>
 
 </html>
