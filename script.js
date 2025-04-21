@@ -1,46 +1,26 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const priceFilter = document.getElementById("priceFilter");
+document.getElementById("filtro-preco").addEventListener("change", function () {
+  const cursos = document.querySelectorAll('[data-preco]');
+  const valorSelecionado = this.value;
 
-  priceFilter.addEventListener("change", function () {
-    const selected = this.value;
-    const grid = document.querySelector(".product-grid");
-    const cards = Array.from(document.querySelectorAll(".product-card"));
+  cursos.forEach((curso) => {
+    const precoStr = curso.getAttribute("data-preco");
+    const preco = parseFloat(precoStr.replace(',', '.'));
 
-    if (selected === "lowToHigh") {
-      const filteredCards = cards
-        .filter(card => {
-          const priceTag = card.querySelector("h2:nth-of-type(2)");
-          if (!priceTag) return false;
-          const priceText = priceTag.innerText.trim();
-          if (priceText.includes("*/Em breve*/")) return false;
-          return true;
-        })
-        .sort((a, b) => {
-          const priceA = parseFloat(a.querySelector("h2:nth-of-type(2)").innerText.replace("R$ ", "").replace(",", "."));
-          const priceB = parseFloat(b.querySelector("h2:nth-of-type(2)").innerText.replace("R$ ", "").replace(",", "."));
-          return priceA - priceB;
-        });
+    let mostrar = true;
 
-      grid.innerHTML = "";
-      filteredCards.forEach(card => grid.appendChild(card));
-    } else {
-      cards.forEach((card) => {
-        const priceTag = card.querySelector("h2:nth-of-type(2)");
-        if (!priceTag) return;
-
-        const priceText = priceTag.innerText.trim();
-        if (priceText.includes("Em breve")) return;
-
-        const price = parseFloat(priceText.replace("R$ ", "").replace(",", "."));
-
-        let show = true;
-        if (selected === "below50" && price > 50) show = false;
-        if (selected === "50to100" && (price < 50 || price > 100)) show = false;
-        if (selected === "above100" && price <= 100) show = false;
-
-        card.style.display = show ? "block" : "none";
-      });
+    if (valorSelecionado === "ate50") {
+      mostrar = preco <= 50;
+    } else if (valorSelecionado === "50a100") {
+      mostrar = preco > 50 && preco <= 100;
+    } else if (valorSelecionado === "acima100") {
+      mostrar = preco > 100;
     }
-  });
-});
 
+    curso.style.display = mostrar ? "block" : "none";
+  });
+
+  // ✅ Recalcula animações AOS
+  if (typeof AOS !== 'undefined') {
+    AOS.refresh();
+  }
+});
